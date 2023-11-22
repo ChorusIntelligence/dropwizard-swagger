@@ -26,7 +26,7 @@
 
     <groupId>com.smoketurner</groupId>
     <artifactId>dropwizard-swagger</artifactId>
-    <version>4.0.0-2-SNAPSHOT</version>
+    <version>4.0.0-2-CI</version>
 
     <properties>
         <jersey.version>3.0.10</jersey.version>
@@ -128,6 +128,20 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
+    <distributionManagement>
+        <snapshotRepository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/ChorusIntelligence/maven-repository</url>
+        </snapshotRepository>
+        <repository>
+            <id>github</id>
+            <url>https://maven.pkg.github.com/ChorusIntelligence/maven-repository</url>
+        </repository>
+        <site>
+            <id>development-share-site</id>
+            <url>file:\\civfs01\Development Share\Maven Site</url>
+        </site>
+    </distributionManagement>
     <build>
         <plugins>
             <plugin>
@@ -138,8 +152,8 @@
                         <owner>Federico Recio</owner>
                         <email>N/A</email>
                     </properties>
-                 </configuration>
-             </plugin>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>
